@@ -1,0 +1,29 @@
+
+<div class="row">
+    <div class="col-md-6" *ngFor="let post of posts">
+        <!-- Card -->
+<mdb-card>
+    <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+      <!-- Card img -->
+      <mdb-card-img src="{{post.image}}" alt="{{ post.titre}}"></mdb-card-img>
+      <a>
+        <div class="mask"></div>
+      </a>
+    </div>
+    <!--Card content-->
+    <mdb-card-body>
+      <!--Title-->
+      <mdb-card-title>
+        <h4>Card Title</h4>
+      </mdb-card-title>
+  
+      <!--Text-->
+      <mdb-card-text> {{post.extrait}}
+      </mdb-card-text>
+  
+      <a [routerLink] ="['/blog', post.titre]" mdbBtn color="primary" mdbWavesEffect>Button</a>
+    </mdb-card-body>
+  </mdb-card>
+  <!-- Card -->
+    </div>
+</div>

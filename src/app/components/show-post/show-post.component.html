@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" *ngFor="let item of post">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcumb mt-4">
+                    <li class="breadcrumb-item">
+                        <a routerLink="/">Acceuil</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a routerLink="/blog">Blog</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        {{item.titre}}
+                    </li>
+                </ol>
+            </nav>
+            <h2 class="mt-1">{{item.titre}}</h2>
+            <hr>
+
+            <img src="{{item.image}}" alt="{{item.titre}}">
+            <p class="mt-5" [innerHTML]="item.contenu"></p>
+        </div>
+    </div>
+</div>
